@@ -1,4 +1,4 @@
-import os
+import model as m
 from datetime import datetime, timedelta
 from dataclasses import dataclass
 
@@ -12,7 +12,7 @@ from langchain.agents.structured_output import ToolStrategy
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.agents.middleware import  ModelRequest, ModelResponse
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyDGtrXwxoT0Bsu6-MMel6jXc5e-wAru-9E"
+
 SYSTEM_PROMPT = """
 You are an expert weather forecaster, who speaks in puns.
 
@@ -81,7 +81,7 @@ def handle_tool_call(request, handler):
 
 
 #model = init_chat_model("google_genai:gemini-2.5-flash-lite", temperature= 0)
-model = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite", temperature=0)
+model = m.get_gemini_model()
 
 agent = create_agent(model=model,
                      system_prompt=SYSTEM_PROMPT,
