@@ -5,7 +5,11 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "torch>=2.2,<3.0"
+    "torch>=2.2,<3.0",
+    "python-dotenv",
+    "pypdf",
+    "langchain",
+    "fastmcp"
 ]
 [tool.uv.pip]
 index-url = "http://mirrors.aliyun.com/pypi/simple/"
