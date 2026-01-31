@@ -9,7 +9,10 @@ dependencies = [
     "python-dotenv",
     "pypdf",
     "langchain",
-    "fastmcp"
+    "fastmcp",
+    "langgraph>=1.0.6",
+    "display>=1.0.0",
+    "ipython>=9.9.0",
 ]
 [tool.uv.pip]
 index-url = "http://mirrors.aliyun.com/pypi/simple/"

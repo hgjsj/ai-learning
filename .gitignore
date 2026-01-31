@@ -11,5 +11,5 @@ wheels/
 .idea/
 data/
 models/
-
+.run
 .env
